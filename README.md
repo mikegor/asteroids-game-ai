@@ -1,6 +1,6 @@
 # asteroids-game-ai
 
-It is game of asteroids where you can steer ship and shoot asteroids down. It contains implemented artificial intelligence that steer the ship by itself and learn to play using neural net and genetic algoritm.</br>
+It is the game of asteroids in which you can steer ship and shoot asteroids down. It contains implemented artificial intelligence that steer the ship by itself and learn to play using neural net and genetic algoritm.</br>
 The game was developed with SFML library. It contains classes with game objects which are created under SFML rules. The class Collisions was created to cover collissions of all objects. It contains pointers to window, asteroids, bullets and player which allow to work comfortably with all events. I have also created static and non-static classes Random which let me to control randomness in my program - sometimes I need repeatable behaviour.</br>
 In my opinion, the most interesting part of the project is ai part. I can divide it in two main sections:</br>
 The first one is neural network. I created it from scratch basing on matrices. Each layer of net is different matrix. The matrix is represented by vector of vectors which allows to manage and do calculations easily. Each neural net consists from 3 matrices which represents weights of input layer, hidden layer and output layer.</br>
