@@ -25,6 +25,6 @@ void Asteroid::update() {
 	this->shape.move(this->vel);
 }
 
-void Asteroid::render(sf::RenderTarget* target) {
+void Asteroid::render(std::shared_ptr<sf::RenderTarget> target) {
 	target->draw(this->shape);
 }

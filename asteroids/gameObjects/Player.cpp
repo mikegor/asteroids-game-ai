@@ -2,7 +2,7 @@
 
 void Player::initVariables()
 {
-	this->attackCooldownMax = 10.f;
+	this->attackCooldownMax = 20.f;
 	this->attackCooldown = this->attackCooldownMax;
 }
 
@@ -14,8 +14,6 @@ Player::Player()
 	this->shape.setOrigin(30.f, 30.f);
 	this->shape.setPosition(sf::Vector2f(640, 360));
 	this->shape.rotate(180.f);
-
-	//ai
 }
 
 sf::FloatRect Player::getBounds()
@@ -85,7 +83,7 @@ void Player::update()
 	this->updateAttack();
 }
 
-void Player::render(sf::RenderTarget* target)
+void Player::render(std::shared_ptr<sf::RenderTarget> target)
 {
 	target->draw(this->shape);
 }

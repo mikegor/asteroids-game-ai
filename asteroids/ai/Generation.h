@@ -10,7 +10,7 @@
 #include"Random.h"
 
 class Generation {
-	sf::RenderWindow* window;
+	std::shared_ptr<sf::RenderWindow> window = nullptr;
 
 	std::shared_ptr<std::vector<std::shared_ptr<Asteroid>>> asteroids =  std::make_shared<std::vector<std::shared_ptr<Asteroid>>>();
 	std::shared_ptr<std::vector<std::shared_ptr<Bullet>>> bullets = std::make_shared<std::vector<std::shared_ptr<Bullet>>>();
@@ -41,7 +41,7 @@ class Generation {
 
 	int score = 0;
 	
-	void initWindow(sf::RenderWindow* window);
+	void initWindow(std::shared_ptr<sf::RenderWindow> window);
 	void initAsteroids(int asteroidsAmount);
 	void initPlayer();
 
@@ -49,7 +49,7 @@ class Generation {
 
 public:
 	Generation() {};
-	Generation(sf::RenderWindow* window, int asteroidsAmount);
+	Generation(std::shared_ptr<sf::RenderWindow> window, int asteroidsAmount);
 
 	void updateAsteroids();
 	void updateBullets();

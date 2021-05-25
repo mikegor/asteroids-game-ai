@@ -2,8 +2,8 @@
 
 AiGame::AiGame() : population(0, nullptr, 0)
 {
-	this->window = new sf::RenderWindow(sf::VideoMode(this->windowX, this->windowY), "Asteroids");
-	population = Population(50, window, 10);
+	this->window = std::make_shared<sf::RenderWindow>(sf::VideoMode(this->windowX, this->windowY), "Asteroids");
+	population = Population(20, window, 10);
 }
 
 void AiGame::run()

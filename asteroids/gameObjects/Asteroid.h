@@ -28,7 +28,7 @@ public:
 	void setPosition(const float x, const float y);
 
 	void update();
-	void render(sf::RenderTarget* target);
+	void render(std::shared_ptr<sf::RenderTarget> target);
 };
 
 class SmallAsteroid : public Asteroid
@@ -41,7 +41,7 @@ public:
 		this->shape.setPosition(sf::Vector2f(posX, posY));
 		this->shape.setOrigin(8.f, 8.f);
 		this->shape.setFillColor(sf::Color(255, 255, 255, 128));
-		this->vel *= 5.f;
+		this->vel *= 0.8f;
 	}
 };
 
@@ -55,7 +55,7 @@ public:
 		this->shape.setPosition(sf::Vector2f(posX, posY));
 		this->shape.setOrigin(15.f, 15.f);
 		this->shape.setFillColor(sf::Color(255, 255, 255, 128));
-		this->vel *= 3.f;
+		this->vel *= 0.6f;
 	}
 };
 
@@ -69,6 +69,6 @@ public:
 		this->shape.setPosition(sf::Vector2f(posX, posY));
 		this->shape.setOrigin(30.f, 30.f);
 		this->shape.setFillColor(sf::Color(255, 255, 255, 128));
-		this->vel *= 2.f;
+		this->vel *= 0.4f;
 	}
 };

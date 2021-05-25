@@ -1,6 +1,6 @@
 #include "Generation.h"
 
-void Generation::initWindow(sf::RenderWindow* window)
+void Generation::initWindow(std::shared_ptr<sf::RenderWindow> window)
 {
 	this->window = window;
 }
@@ -52,7 +52,7 @@ void Generation::spawnAsteroid()
 	asteroids->push_back(asteroid);
 }
 
-Generation::Generation(sf::RenderWindow* window, int asteroidsAmount) : input(8), output(4)
+Generation::Generation(std::shared_ptr<sf::RenderWindow> window, int asteroidsAmount) : input(8), output(4)
 {
 	initWindow(window);
 	initAsteroids(asteroidsAmount);

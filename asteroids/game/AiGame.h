@@ -6,7 +6,7 @@
 
 class AiGame {
 public:
-	sf::RenderWindow* window;
+	std::shared_ptr<sf::RenderWindow> window;
 
 	int windowX = 1280;
 	int windowY = 720;

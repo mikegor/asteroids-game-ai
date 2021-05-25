@@ -15,7 +15,7 @@ public:
 	int asteroidsAmount;
 	int genCounter = 0;
 
-	Population(int size, sf::RenderWindow* window, int asteroidsAmount);
+	Population(int size, std::shared_ptr<sf::RenderWindow> window, int asteroidsAmount);
 
 	void updateAlive();
 	void naturalSelection();

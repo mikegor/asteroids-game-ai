@@ -2,7 +2,7 @@
 
 void Game::initWindow()
 {
-	this->window = new sf::RenderWindow(sf::VideoMode(this->windowX, this->windowY), "Asteroids");
+	this->window = std::make_shared<sf::RenderWindow>(sf::VideoMode(this->windowX, this->windowY), "Asteroids");
 }
 
 void Game::initAsteroids()

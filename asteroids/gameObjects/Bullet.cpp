@@ -22,7 +22,7 @@ void Bullet::update()
     this->shape.move(direction);
 }
 
-void Bullet::render(sf::RenderTarget* target)
+void Bullet::render(std::shared_ptr<sf::RenderTarget> target)
 {
     target->draw(this->shape);
 }

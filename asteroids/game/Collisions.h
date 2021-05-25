@@ -13,7 +13,7 @@ class Player;
 class Collisions {
 
 public:
-	sf::RenderWindow* window = nullptr;
+	std::shared_ptr<sf::RenderWindow> window = nullptr;
 	std::shared_ptr<std::vector<std::shared_ptr<Asteroid>>> asteroids;
 	std::shared_ptr<std::vector<std::shared_ptr<Bullet>>> bullets;
 	std::shared_ptr<Player> player;
@@ -25,7 +25,7 @@ public:
 public:
 	Collisions() {
 	}
-	void setWindow(sf::RenderWindow* window)
+	void setWindow(std::shared_ptr<sf::RenderWindow> window)
 	{
 		this->window = window;
 	}

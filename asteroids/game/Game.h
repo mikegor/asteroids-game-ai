@@ -17,7 +17,7 @@
 class Game
 {
 private:
-	sf::RenderWindow* window;
+	std::shared_ptr<sf::RenderWindow> window;
 	std::shared_ptr<std::vector<std::shared_ptr<Asteroid>>> asteroids = std::make_shared<std::vector<std::shared_ptr<Asteroid>>>();
 	std::shared_ptr<std::vector<std::shared_ptr<Bullet>>> bullets = std::make_shared<std::vector<std::shared_ptr<Bullet>>>();
 

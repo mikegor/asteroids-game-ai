@@ -1,6 +1,6 @@
 #include "Population.h"
 
-Population::Population(int size, sf::RenderWindow* window, int asteroidsAmount)
+Population::Population(int size, std::shared_ptr<sf::RenderWindow> window, int asteroidsAmount)
 {
 	this->asteroidsAmount = asteroidsAmount;
 	generations = std::make_shared<std::vector<std::shared_ptr<Generation>>>();
